@@ -23,7 +23,7 @@ def main():
     df = pd.read_excel('UMKM_Efisiensi.xlsx')
     st.title('Assessment & Recommendation')
     st.subheader('Eficiency Assessment')
-    umkm = st.selectbox('Pilih sample', ['SRI UTAMI','ADAM HARUN','YENI'])
+    umkm = st.selectbox('Pilih sample', ['SRI UTAMI','ADAM HARUN','YUSUF'])
     df = df[df['BU'].isin([umkm])]
 #     umkm = df['BU'].tolist()
 #     umkm = umkm[0]
