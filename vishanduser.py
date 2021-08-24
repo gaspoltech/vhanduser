@@ -21,8 +21,8 @@ from pulp import LpMaximize, LpProblem, LpStatus, lpSum, LpVariable
 
 def main():
     df = pd.read_excel('UMKM_Efisiensi.xlsx')
-#     umkm = st.selectbox('Pilih sample', ['SRI UTAMI','ADAM HARUN','YUSNA'])
-    umkm = st.selectbox('Choose MSME Name',df.BU.unique().tolist(),index=3683)
+    umkm = st.selectbox('Pilih sample', ['SRI UTAMI','ADAM HARUN','YUSNA'])
+#     umkm = st.selectbox('Choose MSME Name',df.BU.unique().tolist(),index=3683)
     # elif choice == "Sebaran Program Pemerintah":
 #     if choice == "Government Benefits":
     
@@ -38,8 +38,8 @@ def main():
     if umkm=='All':
         st.write('Please Choose MSME')
     else:
-        dff = df[df['BU'].isin([umkm])]
-#         st.subheader(f'Location: {dff.Nama_pasar.values[0]}')
+        dff = df[df['BU'].isin(umkm)]
+        st.subheader(f'Location: {dff.Nama_pasar.values[0]}')
         st.subheader(f'Eficiency Rate: {int(dff.Efisiensi.mean()*10000)/100} %')
         st.subheader(f'Total Revenue: Rp {int(dff.omset.sum()):,d}')
         # st.number_input(label='Omset UMKM',value=int(dff.omset.sum()), min_value=0,max_value=1000000000000)
