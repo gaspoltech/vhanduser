@@ -35,8 +35,8 @@ def main():
 #         )
 #     elif choice == "Assessment & Recommendations":
     st.subheader('Cek Kelayakan Penerima Bantuan dan Rekomendasi Strategi Efisiensi')
-    provinsi = st.selectbox('Pilih Provinsi',df.Prov.unique())
-    df = df[df['Prov'].isin([provinsi])]
+#     provinsi = st.selectbox('Pilih Provinsi',df.Prov.unique())
+    df = df[df['Prov'].isin(["JAWA TIMUR"])]
     pemda = st.selectbox('Pilih Pemda',df.Kab_APBD.unique())
     df = df[df['Kab_APBD'].isin([pemda])]
     umkm = st.selectbox('Pilih UMKM',['All']+df.BU.unique().tolist())
