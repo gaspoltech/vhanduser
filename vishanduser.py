@@ -27,10 +27,10 @@ def main():
     df = df[df['BU'].isin([umkm])]
 #     umkm = df['BU'].tolist()
 #     umkm = umkm[0]
-    provinsi = st.write(df.Prov.tolist())
-    provinsi = provinsi[0]
-    pemda = st.write(df.Kab_APBD.tolist())
-    pemda = pemda[0]
+    provinsi = st.write(df.Prov.values)
+#     provinsi = provinsi[0]
+    pemda = st.write(df.Kab_APBD.values)
+#     pemda = pemda[0]
     st.title(umkm)
 #     if umkm=='All':
 #         st.write('Please Choose MSME')
