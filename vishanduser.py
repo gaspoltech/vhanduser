@@ -24,9 +24,9 @@ def main():
     st.title('Assessment & Recommendation')
     st.subheader('Eficiency Assessment')
     df = df[df['User'].isin(['sriutami'])]
-    provinsi = st.sidebar.selectbox('Province',df.Prov.unique())
-    pemda = st.sidebar.selectbox('City',df.Kab_APBD.unique())
-    st.title(umkm)
+    provinsi = df.Prov.unique()
+    pemda = df.Kab_APBD.unique()
+    st.title(df['User'].values)
 #     if umkm=='All':
 #         st.write('Please Choose MSME')
 #     else:
