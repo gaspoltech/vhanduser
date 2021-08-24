@@ -23,8 +23,8 @@ def main():
     df = pd.read_excel('UMKM_Efisiensi.xlsx')
     st.title('Assessment & Recommendation')
     st.subheader('Eficiency Assessment')
-    df = df[df['User'].isin(['SRI UTAMI'])]
-    umkm = df['User'].tolist()
+    df = df[df['BU'].isin(['SRI UTAMI'])]
+    umkm = df['BU'].tolist()
     umkm = umkm[0]
     provinsi = df.Prov.unique()
     pemda = df.Kab_APBD.unique()
