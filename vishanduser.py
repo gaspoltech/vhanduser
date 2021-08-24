@@ -35,7 +35,7 @@ def main():
 #     if umkm=='All':
 #         st.write('Please Choose MSME')
 #     else:
-#     dff = df[df['BU'].isin([umkm])]
+    dff = df[df['BU'].isin([umkm])]
 #     st.subheader(f'Location: {dff.Nama_pasar.values[0]}')
     st.subheader(f'Eficiency Rate: {int(dff.Efisiensi.mean()*10000)/100} %')
     st.subheader(f'Total Revenue: Rp {int(dff.omset.sum()):,d}')
