@@ -52,7 +52,7 @@ def main():
         with st.beta_expander('Maximum Fund can be claimed', expanded=False):
             if st.button('Prediction of monthly installment ability'):
                 prediction = huber.predict(input_variables)
-                st.title(f'Maximum Installment: Rp {int(prediction):,d}')
+                st.subheader(f'Maximum Installment: Rp {int(prediction):,d}')
 
     else:
 
