@@ -26,7 +26,7 @@ def main():
     df = df[df['User'].isin(['sriutami'])]
     provinsi = df.Prov.unique()
     pemda = df.Kab_APBD.unique()
-    st.title(df['User'].values)
+    st.title(df['User'].str())
 #     if umkm=='All':
 #         st.write('Please Choose MSME')
 #     else:
