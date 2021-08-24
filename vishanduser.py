@@ -21,12 +21,6 @@ from pulp import LpMaximize, LpProblem, LpStatus, lpSum, LpVariable
 umkm = st.selectbox('Pilih sample', ['SRI UTAMI','ADAM HARUN','YUSNA'])
 
 def main():
-    # st.title("Simulasi Realokasi Budget untuk memaksimalkan Efisiensi dan Omset")
-#     greach= Image.open('GReach.png')
-#     st.sidebar.image(greach)
-    # menu = ["Sasaran Penerima Bantuan","Sebaran Program Pemerintah","Daftar Kandidat Penerima Bantuan","Pendaftaran UMKM"]
-#     menu = ['Assessment & Recommendations',"Government Benefits"]
-    choice = st.sidebar.selectbox("Select Menu", menu)
     df = pd.read_excel('UMKM_Efisiensi.xlsx')
     
     # elif choice == "Sebaran Program Pemerintah":
