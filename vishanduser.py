@@ -30,9 +30,9 @@ def main():
 #     elif choice == 'Assessment & Recommendations':
     st.subheader('Eligibily Check And Efficiency Strategy Recommendation')
 #     provinsi = df.Prov.unique().tolist()
-    provinsi = st.selectbox('Province',df.Prov.unique())
+    provinsi = df['Prov']
     df = df[df['Prov'].isin([provinsi])]
-    pemda = st.selectbox('City',df.Kab_APBD.unique())
+    pemda = df['Kab_APBD]
 #     pemda = df.Kab_APBD.unique().tolist()
     df = df[df['Kab_APBD'].isin([pemda])]
 #         umkm = st.selectbox('Choose MSME Name',['All']+df.BU.unique().tolist())
