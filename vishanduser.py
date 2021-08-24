@@ -39,11 +39,11 @@ def main():
     # elif choice == "Sasaran Penerima Bantuan":
     elif choice == 'Assessment & Recommendations':
         st.subheader('Eligibily Check And Efficiency Strategy Recommendation')
-        provinsi = st.sidebar.selectbox('Province',df.Prov.unique())
+        provinsi = st.selectbox('Province',df.Prov.unique())
         df = df[df['Prov'].isin([provinsi])]
-        pemda = st.sidebar.selectbox('City',df.Kab_APBD.unique())
+        pemda = st.selectbox('City',df.Kab_APBD.unique())
         df = df[df['Kab_APBD'].isin([pemda])]
-        umkm = st.sidebar.selectbox('Choose MSME Name',['All']+df.BU.unique().tolist())
+        umkm = st.selectbox('Choose MSME Name',['All']+df.BU.unique().tolist())
         st.title(umkm)
         if umkm=='All':
             st.write('Please Choose MSME')
