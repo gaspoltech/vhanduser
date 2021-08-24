@@ -44,6 +44,8 @@ def main():
     if umkm=='None':
         st.write('Silakan Pilih UMKM')
     else:
+        provinsi = st.selectbox('Pilih Provinsi',df.Prov.unique())
+        pemda = st.selectbox('Pilih Pemda',df.Kab_APBD.unique())
         dff = df[df['BU'].isin([umkm])]
         st.subheader(f'Lokasi Usaha: {dff.Nama_pasar.values[0]}')
         st.subheader(f'Tingkat Efisiensi UMKM: {int(dff.Efisiensi.mean()*10000)/100} %')
