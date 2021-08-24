@@ -20,24 +20,9 @@ import pulp
 from pulp import LpMaximize, LpProblem, LpStatus, lpSum, LpVariable
 
 def main():
-    # st.title("Simulasi Realokasi Budget untuk memaksimalkan Efisiensi dan Omset")
-#     greach= Image.open('GReach.png')
-#     st.sidebar.image(greach)
-    # menu = ["Sasaran Penerima Bantuan","Sebaran Program Pemerintah","Daftar Kandidat Penerima Bantuan","Pendaftaran UMKM"]
-#     menu = ['MSME Report and Analysis',"Government Benefits",'MSME Candidate List','OCA Dashboard']
-#     choice = st.sidebar.selectbox("Select Menu", menu)
     df = pd.read_excel('UMKM_Efisiensi.xlsx')
-    
-#     elif choice == "Government Benefits":
-        
-    # elif choice == "Sasaran Penerima Bantuan":
-#     elif choice == 'MSME Report and Analysis':
-    st.subheader('Eligibily Check And Efficiency Strategy Recommendation')
-#     provinsi = st.sidebar.selectbox('Province',df.Prov.unique())
-#     df = df[df['Prov'].isin([provinsi])]
-#     pemda = st.sidebar.selectbox('City',df.Kab_APBD.unique())
-#     df = df[df['Kab_APBD'].isin([pemda])]
-#     umkm = st.sidebar.selectbox('Choose MSME Name',['All']+df.BU.unique().tolist())
+    st.title('Assessment & Recommendation')
+    st.subheader('Eficiency Assessment')
     df = df[df['User'].isin(['sriutami'])]
     provinsi = st.sidebar.selectbox('Province',df.Prov.unique())
     pemda = st.sidebar.selectbox('City',df.Kab_APBD.unique())
@@ -150,7 +135,7 @@ def main():
             p3 =  pulp.value(v3)
             total = int((p1+p2+p3)*10000)/100
             outls = [p1,p2,p3]
-            # st.subheader(outls)
+            st.subheader('Reallocation Recommendations')
             h1,h2 = st.beta_columns((5,3))
 
             with h1:
@@ -194,6 +179,7 @@ def main():
                 excess = int(dff['Total_beban']) * (100-total)
                 st.subheader(f'Rp {int(excess):,d}')
                 # st.number_input(label=" ",value=excess,min_value=0.0, max_value=1000000000.0, step=10.0)
+     st.title('Government Benefit Dashboard')
      components.html(
             '''
             <div class='tableauPlaceholder' id='viz1629823428017' style='position: relative'><noscript><a href='#'><img alt='Dashboard Pemberdayaan UMKM ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DashboardUMKM&#47;DashboardUMKM&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='DashboardUMKM&#47;DashboardUMKM' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DashboardUMKM&#47;DashboardUMKM&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1629823428017');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1127px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
