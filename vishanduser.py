@@ -22,7 +22,7 @@ from pulp import LpMaximize, LpProblem, LpStatus, lpSum, LpVariable
 def main():
     df = pd.read_excel('UMKM_Efisiensi.xlsx')
 #     umkm = st.selectbox('Pilih sample', ['SRI UTAMI','ADAM HARUN','YUSNA'])
-    umkm = st.selectbox('Choose MSME Name',['SRI UTAMI']+df.BU.unique().tolist())
+    umkm = st.selectbox('Choose MSME Name',index=3684,df.BU.unique().tolist())
     # elif choice == "Sebaran Program Pemerintah":
 #     if choice == "Government Benefits":
     
