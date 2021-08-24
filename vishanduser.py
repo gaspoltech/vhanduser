@@ -27,8 +27,8 @@ def main():
     df = df[df['BU'].isin([umkm])]
 #     umkm = df['BU'].tolist()
 #     umkm = umkm[0]
-    provinsi = df.Prov.unique()
-    pemda = df.Kab_APBD.unique()
+    provinsi = st.write(df.Prov.unique())
+    pemda = st.write(df.Kab_APBD.unique())
     st.title(umkm)
 #     if umkm=='All':
 #         st.write('Please Choose MSME')
