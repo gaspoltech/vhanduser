@@ -24,9 +24,11 @@ def main():
     st.title('Assessment & Recommendation')
     st.subheader('Eficiency Assessment')
     df = df[df['User'].isin(['sriutami'])]
+    umkm = df['User'].tolist()
+    umkm = umkm[0]
     provinsi = df.Prov.unique()
     pemda = df.Kab_APBD.unique()
-    st.title(df['User'][0])
+    st.title(umkm)
 #     if umkm=='All':
 #         st.write('Please Choose MSME')
 #     else:
