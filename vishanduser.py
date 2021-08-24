@@ -37,8 +37,8 @@ def main():
     st.subheader('Cek Kelayakan Penerima Bantuan dan Rekomendasi Strategi Efisiensi')
 #     provinsi = st.selectbox('Pilih Provinsi',df.Prov.unique())
     df = df[df['Prov'].isin(["JAWA TIMUR"])]
-    pemda = st.selectbox('Pilih Pemda',df.Kab_APBD.unique())
-#     df = df[df['Kab_APBD'].isin(['SIDOARJO'])]
+#     pemda = st.selectbox('Pilih Pemda',df.Kab_APBD.unique())
+    df = df[df['Kab_APBD'].isin(['Kab. Sidoarjo'])]
     umkm = st.selectbox('Pilih UMKM',['None']+df.BU.unique().tolist())
     st.title(umkm)
     if umkm=='None':
