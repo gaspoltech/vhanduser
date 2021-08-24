@@ -96,8 +96,8 @@ def main():
             with c3:
                 #min value
                 v1min = st.number_input(label=s1+'min',value=f1.quantile(0.25)*100.0,min_value=0.0, max_value=100.0, step=1.0)
-                v2min = st.number_input(label=s1+'min',value=f2.quantile(0.25)*100.0,min_value=0.0, max_value=100.0, step=1.0)
-                v3min = st.number_input(label=s1+'min',value=f3.quantile(0.25)*100.0,min_value=0.0, max_value=100.0, step=1.0)
+                v2min = st.number_input(label=s2+'min',value=f2.quantile(0.25)*100.0,min_value=0.0, max_value=100.0, step=1.0)
+                v3min = st.number_input(label=s3+'min',value=f3.quantile(0.25)*100.0,min_value=0.0, max_value=100.0, step=1.0)
             with c4:
                 #max value
                 v1max = st.number_input(label=s1+'max',value=f1.max()*100.0,min_value=0.0, max_value=100.0, step=1.0)
