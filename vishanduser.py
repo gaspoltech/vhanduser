@@ -18,7 +18,9 @@ from io import BytesIO
 # linear programming
 import pulp
 from pulp import LpMaximize, LpProblem, LpStatus, lpSum, LpVariable
-umkm = st.selectbox('Pilih sample', ['SRI UTAMI','ADAM HARUN','YUSNA'])
+# umkm = st.selectbox('Pilih sample', ['SRI UTAMI','ADAM HARUN','YUSNA'])
+
+umkm = st.selectbox('Choose MSME Name',df.BU.unique().tolist(),value=['SRI UTAMI')
 
 def main():
     df = pd.read_excel('UMKM_Efisiensi.xlsx')
