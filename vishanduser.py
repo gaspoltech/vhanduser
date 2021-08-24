@@ -32,7 +32,7 @@ def main():
 #     provinsi = df.Prov.unique().tolist()
     provinsi = df['Prov']
     df = df[df['Prov'].isin([provinsi])]
-    pemda = df['Kab_APBD]
+    pemda = df['Kab_APBD']
 #     pemda = df.Kab_APBD.unique().tolist()
     df = df[df['Kab_APBD'].isin([pemda])]
 #         umkm = st.selectbox('Choose MSME Name',['All']+df.BU.unique().tolist())
