@@ -1,5 +1,4 @@
-umkm = st.selectbox('Pilih sample', ['SRI UTAMI','ADAM HARUN','YUSNA'])
-   import streamlit as st
+import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly_express as px
@@ -19,6 +18,7 @@ from io import BytesIO
 # linear programming
 import pulp
 from pulp import LpMaximize, LpProblem, LpStatus, lpSum, LpVariable
+umkm = st.selectbox('Pilih sample', ['SRI UTAMI','ADAM HARUN','YUSNA'])
 
 def main():
     # st.title("Simulasi Realokasi Budget untuk memaksimalkan Efisiensi dan Omset")
