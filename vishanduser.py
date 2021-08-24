@@ -27,7 +27,7 @@ def main():
     df = df[df['BU'].isin([umkm])]
 #     umkm = df['BU'].tolist()
 #     umkm = umkm[0]
-    provinsi = df['Prov.values'].unique()
+    provinsi = df['Prov'].unique()
 #     provinsi = provinsi[0]
     pemda = df['Kab_APBD'].unique()
 #     pemda = pemda[0]
