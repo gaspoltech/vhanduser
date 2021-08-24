@@ -30,9 +30,9 @@ def main():
 #     elif choice == 'Assessment & Recommendations':
     st.subheader('Eligibily Check And Efficiency Strategy Recommendation')
 #     provinsi = df.Prov.unique().tolist()
-    provinsi = st.selectbox('Province',df.Prov.unique())
+    provinsi = st.selectbox('Province',df.Prov.unique().tolist())
     df = df[df['Prov'].isin([provinsi])]
-    pemda = st.selectbox('City',df.Kab_APBD.unique())
+    pemda = st.selectbox('City',df.Kab_APBD.unique().tolist()())
 #     pemda = df.Kab_APBD.unique().tolist()
     df = df[df['Kab_APBD'].isin([pemda])]
 #         umkm = st.selectbox('Choose MSME Name',['All']+df.BU.unique().tolist())
@@ -40,7 +40,7 @@ def main():
     if umkm=='All':
         st.write('Please Choose MSME')
     else:
-        dff = df[df['BU'].isin(umkm[0])]
+        dff = df[df['BU'].isin([umkm])]
         st.subheader(f'Location: {dff.Nama_pasar.values[0]}')
         st.subheader(f'Eficiency Rate: {int(dff.Efisiensi.mean()*10000)/100} %')
         st.subheader(f'Total Revenue: Rp {int(dff.omset.sum()):,d}')
